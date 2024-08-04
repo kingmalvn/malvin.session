@@ -6,7 +6,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-    default: Itachi Uchiha,
+    default: Gifted_Tech,
     useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
             saveCreds
         } = await useMultiFileAuthState('./temp/'+id)
      try {
-            let Pair Cod_By_Itachi_Uchiha = Itachi_Uchiha({
+            let Pair_Code_By_Gifted_Tech = Gifted_Tech({
                 auth: {
                     creds: state.creds,
                     keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
@@ -35,16 +35,16 @@ router.get('/', async (req, res) => {
                 logger: pino({level: "fatal"}).child({level: "fatal"}),
                 browser: ["Chrome (Linux)", "", ""]
              });
-             if(!Pair_Code_By_Uchiha_Clan.authState.creds.registered) {
+             if(!Pair_Code_By_Gifted_Tech.authState.creds.registered) {
                 await delay(1500);
                         num = num.replace(/[^0-9]/g,'');
-                            const code = await Pair_Code_By_Itachi_Uchiha.requestPairingCode(num)
+                            const code = await Pair_Code_By_Gifted_Tech.requestPairingCode(num)
                  if(!res.headersSent){
                  await res.send({code});
                      }
                  }
-            Pair_Code_By_Itachi_Uchiha.ev.on('creds.update', saveCreds)
-            Pair_Code_By_Itachi_Uchiha.ev.on("connection.update", async (s) => {
+            Pair_Code_By_Gifted_Tech.ev.on('creds.update', saveCreds)
+            Pair_Code_By_Gifted_Tech.ev.on("connection.update", async (s) => {
                 const {
                     connection,
                     lastDisconnect
@@ -54,37 +54,33 @@ router.get('/', async (req, res) => {
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                 await delay(800);
                let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_Itachi_Uchiha.sendMessage(Pair_Code_By_Itachi_Uchiha.user.id, { text: '' + b64data });
+               let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: '' + b64data });
 
-               let ITACHI_UCHIHA_TEXT = `
-*_Pair Code Connected by Malvin Tech*
-*_Made With 🤍_*
-______________________________________
-╔════◇
-║ *『 WOW YOU'VE CHOSEN Kings CLAN 』*
-║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
-╚════════════════════════╝
-╔═════◇
-║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ *Ytube:* _youtube.com/@MalvinKing_TECH 
-║❒ *Owner:* _https://wa.me/263714757857
-║❒ *Repo:* _https://github.com/kingmalvn 
-║❒ *WaGroup:* _https://chat.whatsapp.com/C6mhOzGQqK5Lpu3y7noTOd_
-║❒ *WaChannel:* _https://whatsapp.com/channel/0029Vac8SosLY6d7CAFndv3Z_
-║❒ *Plugins:* _https://github.com/kingmalvn
-╚════════════════════════╝
-_____________________________________
+               let GIFTED_MD_TEXT = `
+┏━━━━━━━━━━━━━━
+┃𝗞𝗜𝗡𝗚 𝗠𝗔𝗩𝗜𝗡 𝗠𝗗 SESSION IS 
+┃SUCCESSFULLY
+┃CONNECTED ✅🔥
+┗━━━━━━━━━━━━━━━
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+❶ || Creator = 𖥘 MALVIN KING 𖥘
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+❷ || WhattsApp Channel = https://whatsapp.com/channel/0029Vac8SosLY6d7CAFndv3Z
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+❸ || Owner = https://t.me/malvinking2
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+©*2024-2099 Malvin King*
 
 _Don't Forget To Give Star To My Repo_`
- await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_ITACHI_UCHIHA.user.id,{text:UCHIHA_CLAN_TEXT},{quoted:session})
+ await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
  
 
         await delay(100);
-        await Pair_Code_By_ITACHI_UCHIHA.ws.close();
+        await Pair_Code_By_Gifted_Tech.ws.close();
         return await removeFile('./temp/'+id);
             } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
-                    ITACHI_UCHIHA_PAIR_CODE();
+                    GIFTED_MD_PAIR_CODE();
                 }
             });
         } catch (err) {
@@ -95,6 +91,7 @@ _Don't Forget To Give Star To My Repo_`
          }
         }
     }
-    return await UCHIHA_CLAN_PAIR_CODE()
+    return await GIFTED_MD_PAIR_CODE()
 });
 module.exports = router
+ 
