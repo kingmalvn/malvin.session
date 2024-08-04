@@ -6,7 +6,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-    default: Itachi Uchiha,
+    default: 'Itachi Uchiha',
     useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
