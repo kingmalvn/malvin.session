@@ -6,7 +6,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-    default: Itachi_Uchiha,
+    default: King_Malvin,
     useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
@@ -20,13 +20,13 @@ function removeFile(FilePath){
 router.get('/', async (req, res) => {
     const id = makeid();
     let num = req.query.number;
-        async function GIFTED_MD_PAIR_CODE() {
+        async function KING_MALVIN_PAIR_CODE() {
         const {
             state,
             saveCreds
         } = await useMultiFileAuthState('./temp/'+id)
      try {
-            let Pair Cod_By_Itachi_Uchiha = Itachi_Uchiha({
+            let Pair Cod_By_King_Malvin = King_Malvin({
                 auth: {
                     creds: state.creds,
                     keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
@@ -35,16 +35,16 @@ router.get('/', async (req, res) => {
                 logger: pino({level: "fatal"}).child({level: "fatal"}),
                 browser: ["Chrome (Linux)", "", ""]
              });
-             if(!Pair_Code_By_Uchiha_Clan.authState.creds.registered) {
+             if(!Pair_Code_By_King_Malvin.authState.creds.registered) {
                 await delay(1500);
                         num = num.replace(/[^0-9]/g,'');
-                            const code = await Pair_Code_By_Itachi_Uchiha.requestPairingCode(num)
+                            const code = await Pair_Code_By_King_Malvin.requestPairingCode(num)
                  if(!res.headersSent){
                  await res.send({code});
                      }
                  }
-            Pair_Code_By_Itachi_Uchiha.ev.on('creds.update', saveCreds)
-            Pair_Code_By_Itachi_Uchiha.ev.on("connection.update", async (s) => {
+            Pair_Code_By_King_Malvin.ev.on('creds.update', saveCreds)
+            Pair_Code_By_King_Malvin.ev.on("connection.update", async (s) => {
                 const {
                     connection,
                     lastDisconnect
@@ -54,9 +54,9 @@ router.get('/', async (req, res) => {
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                 await delay(800);
                let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_Itachi_Uchiha.sendMessage(Pair_Code_By_Itachi_Uchiha.user.id, { text: '' + b64data });
+               let session = await Pair_Code_By_King_Malvin.sendMessage(Pair_Code_By_King_Malvin.user.id, { text: '' + b64data });
 
-               let ITACHI_UCHIHA_TEXT = `
+               let KING_MALVIN_TEXT = `
 *_Pair Code Connected by Malvin Tech*
 *_Made With 🤍_*
 ______________________________________
@@ -76,15 +76,15 @@ ______________________________________
 _____________________________________
 
 _Don't Forget To Give Star To My Repo_`
- await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_ITACHI_UCHIHA.user.id,{text:UCHIHA_CLAN_TEXT},{quoted:session})
+ await Pair_Code_By_King_Malvin.sendMessage(Pair_Code_By_King_Malvin.user.id,{text:KING_MALVIN_TEXT},{quoted:session})
  
 
         await delay(100);
-        await Pair_Code_By_ITACHI_UCHIHA.ws.close();
+        await Pair_Code_By_King_Malvin.ws.close();
         return await removeFile('./temp/'+id);
             } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
-                    ITACHI_UCHIHA_PAIR_CODE();
+                    KING_MALVIN_PAIR_CODE();
                 }
             });
         } catch (err) {
@@ -95,6 +95,6 @@ _Don't Forget To Give Star To My Repo_`
          }
         }
     }
-    return await UCHIHA_CLAN_PAIR_CODE()
+    return await KING_MALVIN_PAIR_CODE()
 });
 module.exports = router
