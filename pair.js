@@ -56,7 +56,7 @@ router.get('/', async (req, res) => {
                let b64data = Buffer.from(data).toString('base64');
                let session = await Pair_Code_By_King_Malvin.sendMessage(Pair_Code_By_King_Malvin.user.id, { text: '' + b64data });
 
-               let KING_MALVIN_TEXT = `
+               let KING_MALVIN_TEXT =`
 *_Pair Code Connected by Malvin Tech*
 *_Made With 🤍_*
 
