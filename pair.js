@@ -59,23 +59,36 @@ router.get('/', async (req, res) => {
                let KING_MALVIN_TEXT = `
 *_Pair Code Connected by Malvin Tech*
 *_Made With 🤍_*
-______________________________________
-╔════◇
-║ *『 WOW YOU'VE CHOSEN Kings CLAN 』*
-║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
-╚════════════════════════╝
-╔═════◇
-║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ *Ytube:* _youtube.com/@MalvinKing_TECH 
-║❒ *Owner:* _https://wa.me/263714757857
-║❒ *Repo:* _https://github.com/kingmalvn 
-║❒ *WaGroup:* _https://chat.whatsapp.com/C6mhOzGQqK5Lpu3y7noTOd_
-║❒ *WaChannel:* _https://whatsapp.com/channel/0029Vac8SosLY6d7CAFndv3Z_
-║❒ *Plugins:* _https://github.com/kingmalvn
-╚════════════════════════╝
-_____________________________________
 
-_Don't Forget To Give Star To My Repo_`
+> You have completed the first step of Deploying *A Whatsapp Bot*, Copy the above message and deploy your bot.Meanwhile you must follow the 4 steps. 
+
+> 1st STEP
+*TAP THE LINK BELOW AND FOLLOW THE CHANNEL* 
+𓄂 https://whatsapp.com/channel/0029Vac8SosLY6d7CAFndv3Z
+
+> 2nd STEP
+*YOU MUST JOIN OUR GROUP FOR UPDATES ON THIS BOT*
+𓄂 https://chat.whatsapp.com/GFp6TrVc6ebAPK9qIsEu50
+
+> 3rd STEP
+*FORK AND STAR 🌟 THE REPO FOR COURAGE*
+𓄂 https://github.com/kingmalvn/RAVENS-MD 
+
+> 4th STEP 
+*VISIT FOR TUTORIALS IF YOU DON'T KNOW HOW TO DEPLOY*
+𓄂 https://youtube.com/@MalvinKing_TECH 
+
+*DEVELOPER1: KING MALVIN*
+𓄂 https://wa.me/263780166288
+
+*DEVELOPER2: KING MALVIN*
+𓄂 https://wa.me/263780958186
+
+*FOLLOW MY GITHUB PAGE*
+𓄂 https://github.com/kingmalvn 
+
+> MADE ON EARTH BY KING MALVIN🇿🇼
+> CREATED BY MALVIN `
  await Pair_Code_By_King_Malvin.sendMessage(Pair_Code_By_King_Malvin.user.id,{text:KING_MALVIN_TEXT},{quoted:session})
  
 
