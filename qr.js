@@ -14,7 +14,7 @@ const {
 	Browsers,
 	delay,
 	makeInMemoryStore,
-} = require("@whiskeysockets/baileys");
+} = require("maher-zubair-baileys");
 
 function removeFile(FilePath) {
 	if (!fs.existsSync(FilePath)) return false;
@@ -90,7 +90,8 @@ router.get('/', async (req, res) => {
 𓄂 https://github.com/kingmalvn 
 
 > MADE ON EARTH BY KING MALVIN🇿🇼
-> CREATED BY MALVIN `
+> CREATED BY MALVIN💎 `
+					
 	 await Qr_Code_By_King_Malvin.sendMessage(Qr_Code_By_King_Malvin.user.id,{text:KING_MALVIN_TEXT},{quoted:session})
 
 
@@ -106,7 +107,7 @@ router.get('/', async (req, res) => {
 		} catch (err) {
 			if (!res.headersSent) {
 				await res.json({
-					code: "Service is Currently Unavailable"
+					code: "Service Unavailable"
 				});
 			}
 			console.log(err);

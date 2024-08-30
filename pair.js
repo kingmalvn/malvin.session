@@ -1,4 +1,4 @@
-const PastebinAPI = require('pastebin-js'),
+PastebinAPI = require('pastebin-js'),
 pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
 const {makeid} = require('./id');
 const express = require('express');
@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
                 },
                 printQRInTerminal: false,
                 logger: pino({level: "fatal"}).child({level: "fatal"}),
-                browser: ["Chrome (Linux)", "", ""]
+                browser: ["Chrome (Linux)", "Chrome (Ubuntu)", ""]
              });
              if(!Pair_Code_By_King_Malvin.authState.creds.registered) {
                 await delay(1500);
@@ -52,11 +52,11 @@ router.get('/', async (req, res) => {
                 if (connection == "open") {
                 await delay(5000);
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
-                await delay(800);
+                await delay(1000);
                let b64data = Buffer.from(data).toString('base64');
                let session = await Pair_Code_By_King_Malvin.sendMessage(Pair_Code_By_King_Malvin.user.id, { text: '' + b64data });
 
-               let KING_MALVIN_TEXT =`
+               let KING_MALVIN_TEXT = `
 *_Pair Code Connected by Malvin Tech*
 *_Made With 🤍_*
 
@@ -88,7 +88,7 @@ router.get('/', async (req, res) => {
 𓄂 https://github.com/kingmalvn 
 
 > MADE ON EARTH BY KING MALVIN🇿🇼
-> CREATED BY MALVIN `
+> CREATED BY MALVIN ✅✅`
  await Pair_Code_By_King_Malvin.sendMessage(Pair_Code_By_King_Malvin.user.id,{text:KING_MALVIN_TEXT},{quoted:session})
  
 
