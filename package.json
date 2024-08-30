@@ -1,14 +1,14 @@
 {
-    "description": "qr",
-    "main": "./Maher_Zubair.js",
+    "description": "malvinsession",
+    "main": "./kingmalvn.js",
   "engines" : { 
     "npm" : ">=9.7.2",
     "node" : ">=20.0.0"
     },
     "scripts": {
-    "start": "node Maher-Zubair.js"
+    "start": "node kingmalvn.js"
   },
-  "author": "Maher-Zubair",
+  "author": "kingmalvn",
   "license": "GPL-3.0 license",
   "dependencies": {
     "@whiskeysockets/baileys": "^6.5.0",
