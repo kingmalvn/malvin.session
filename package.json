@@ -1,15 +1,15 @@
 {
-    "description": "malvinsession",
-    "main": "./kingmalvn.js",
+    "description": "qr",
+    "main": "./index.js",
   "engines" : { 
     "npm" : ">=9.7.2",
     "node" : ">=20.0.0"
     },
     "scripts": {
-    "start": "node kingmalvn.js"
+    "start": "node index.js"
   },
   "author": "kingmalvn",
-  "license": "GPL-3.0 license",
+  "license": "MIT license",
   "dependencies": {
     "@whiskeysockets/baileys": "^6.5.0",
     "maher-zubair-baileys": "^6.6.5",

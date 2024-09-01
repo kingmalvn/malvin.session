@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Malvin King </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url("https://telegra.ph/file/dc73e16b9988c7c56b56f.jpg"); /* Set the background image */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    } 
+
+    .btn {
+      --color: #e5f5f1;
+      --color2: rgb(0, 0, 0);
+      width: 200px;
+      padding: 0.8em 1.75em;
+      background-color: black;
+      border-radius: 6px;
+      border: .3px solid var(--color);
+      transition: .5s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      z-index: 1;
+      font-weight: 300;
+      font-size: 17px;
+      font-family: 'Roboto', 'Segoe UI', sans-serif;
+      text-transform: uppercase;
+      color: var(--color);
+      margin-bottom: 24px;
+    }
+
+    .btn::after, .btn::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      transform: skew(90deg) translate(-50%, -50%);
+      position: absolute;
+      inset: 50%;
+      left: 25%;
+      z-index: -1;
+      transition: .5s ease-out;
+      background-color: var(--color);
+    }
+
+    .btn::before {
+      top: -50%;
+      left: -25%;
+      transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+    }
+
+    .btn:hover::before {
+      transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+    }
+
+    .btn:hover::after {
+      transform: skew(45deg) translate(-50%, -50%);
+    }
+
+    .btn:hover {
+      color: var(--color2);
+    }
+
+    .btn:active {
+      filter: brightness(.7);
+      transform: scale(.98);
+    }
+  </style>
+</head>
+<body>
+<body><marquee style="color:blue;background-color:royal;height:75px;">
+ 
+  Hello 👋 welcome to Malvin King web site 🍀</marquee>
+  <button onclick="window.open(`/qr`)" class="btn">qr code</button>
+  <button onclick="window.open(`/pair`)" class="btn">pair code</button>
+  <button onclick="window.open(`https://dashboard.heroku.com/new?template=https://github.com/kingmalvn/RAVENS-MD`)" class="btn">Deploy</button>
+  <button onclick="window.open('https://github.com/kingmalvn/RAVENS-MD')" class="btn">Bot Repo</button>
+  <button onclick="window.open(`https://wa.me/263714757857`)" class="btn">Developer 1</button>
+  <button onclick="window.open(`https://wa.me/263780958186`)" class="btn">Developer 2</button>
+  <button onclick="window.open(`https://wa.me/263780166288`)" class="btn">Developer 3</button>
+  <button onclick="window.open(`https://whatsapp.com/channel/0029Vac8SosLY6d7CAFndv3Z`)" class="btn">Wa Group</button>
+  <button onclick="window.open(`https://youtube.com/@MalvinKing_TECH`)" class="btn">YouTube</button>
+  <button onclick="window.open(`https://www.tiktok.com/@malvinquotes`)" class="btn" >TikTok</button>
+  <button onclick="window.open(`https://t.me/malvinking2`)" class="btn">Telegram</button>
+
+
+</body>
+</html>

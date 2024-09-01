@@ -1,9 +1,9 @@
 {
-    "name": "Malvin Session Generator",
-    "description": "I'm Web Session Generator by king Me Malvin<",
+    "name": "King Malvin session",
+    "description": "A session generator platform for all WA bot, Created by Malvin King jux to simplify your digital lives",
     "logo": "https://telegra.ph/file/dc73e16b9988c7c56b56f.jpg",
-    "repository": "https://github.com/Giftedmaurice/giftedmdV2-session-generator",
-    "keywords": ["@Xcelsama"],
+    "repository": "https://github.com/kingmalvn/malvin.session",
+    "keywords": ["malvin.session"],
     "success_url": "/", 
     "buildpacks": [{ "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" } ],
     "env": {      
@@ -13,7 +13,7 @@
         "required": false 
       },
       "MESSAGE": {
-        "description": "",
+        "description": "set session id conformation message",
         "value": "",
         "required": false 
       }
