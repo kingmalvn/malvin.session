@@ -5,7 +5,7 @@
 
 <strong>NB:<strong/> This repo also generates session ID for all bots using whiskeysockets/baileys
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
-<br/>QR- WEB - PAIR CODE FOR BOT WITH WHISKEYSOCKETS/BAILEYS
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines=+•★⃝malvin.session★⃝•;QR+WEB+PAIR+CODE+FOR+BOT;+WITH+WHISKEYSOCKETS/BAILEYS." alt="Typing SVG" />
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
 <p align="center">
    <a href="https://github.com/kingmalvn">
@@ -20,7 +20,7 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=green&lines=■+✨,fork+my+repo+if+you+like+this+session)](https://git.io/typing-svg)
     <br>
-<a href="https://github.com/kingmalvn/malvin.session"><img title="WEB" src="https://img.shields.io/badge/FORK Malvin-QR?color=green&style=for-the-badge&logo=stackshare"></a>
+<a href="https://github.com/kingmalvn/malvin.session"><img title="WEB" src="https://img.shields.io/badge/FORK Malvin Session-QR?color=red&style=for-the-badge&logo=stackshare"></a>
 
 Now Deploy
 
