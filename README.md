@@ -18,17 +18,30 @@
 
 [`ℹ️Contact Owner`](https://wa.me/263714757857)
 
-FORK THE REPOSITORY (Repo) 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=green&lines=■+✨,fork+my+repo+if+you+like+this+session)](https://git.io/typing-svg)
     <br>
 <a href="https://github.com/kingmalvn/malvin.session"><img title="WEB" src="https://img.shields.io/badge/FORK Malvin-QR?color=green&style=for-the-badge&logo=stackshare"></a>
 
 Now Deploy
-    <br>
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=green&lines=☆+Deploy+to+heroku...)](https://git.io/typing-svg)
+
+    
 <a href='https://dashboard.heroku.com/new?template=https://github.com/kingmalvn/malvin.session' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-blue?style=for-the-badge&logo=heroku&logoColor=white'/>
 
-2nd Deploy 
-    <br>
-<a href='https://dashboard.render.com/new?template=https://github.com/kingmalvn/malvin.session' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=Render&logoColor=white'/>
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=green&lines=■+How+to+Deploy+on+Render..👇👇.)](https://git.io/typing-svg)
+
+    RENDER PROCESS:
+    1: Click "NEW".
+    2: Select "Web Service".
+    3: Click "Build and deploy from a Git repository".
+    4: Now Choose this forked git repo from list.
+    5: And JUST CLICK "Connect".
+
+ [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=green&lines=☆+Deploy+on+Render+now..👇👇.)](https://git.io/typing-svg)
+
+ 
+<a href='https://dashboard.render.com/new?template=https://github.com/kingmalvn/malvin.session' target="_white"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-white?style=for-the-badge&logo=Render&logoColor=black'/>
 
 
 [`HERE'S AN EXAMPLE OUTPUT`](https://wasi-session-test-2d5de70f8522.herokuapp.com)
