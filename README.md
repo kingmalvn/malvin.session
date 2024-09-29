@@ -44,7 +44,7 @@ Now Deploy
 <a href='https://dashboard.render.com/new?template=https://github.com/kingmalvn/malvin.session' target="_white"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-white?style=for-the-badge&logo=Render&logoColor=black'/>
 
 
-[`HERE'S AN EXAMPLE OUTPUT`](https://wasi-session-test-2d5de70f8522.herokuapp.com)
+[`HERE'S AN EXAMPLE OUTPUT`](https://malvin-session-0h9e.onrender.com/)
 # `Owner`
 
  <a href="https://github.com/kingmalvn"><img src="https://github.com/kingmalvn.png" width="250" height="250" alt=" Malvin King"/></a>
