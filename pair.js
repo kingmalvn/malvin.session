@@ -68,9 +68,9 @@ router.get('/', async (req, res) => {
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ❸ || Owner = https://wa.me/263780166288
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❺ || Bot Repo = https://github.com/kingmalvn/RAVENS-MD
+❺ || Bot Repo = https://github.com/kingmalvn/LORD-MD 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❻ || YouTube = https://www.youtube.com/@MalvinKing_TECH 
+❻ || YouTube = https://www.youtube.com/@malvintech2 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ©2024-2099 ᴍᴀʟᴠɪɴ-ᴋɪɴɢ_`
  await Pair_Code_By_Malvin_King.sendMessage(Pair_Code_By_Malvin_King.user.id,{text:MALVIN_KING_TEXT},{quoted:session})
