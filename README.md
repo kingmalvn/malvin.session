@@ -45,18 +45,16 @@ Now Deploy
 
 
 
-## Deploy Here
+## Or Deploy Here
 
 - [`VERCEL(free)`](https://vercel.com/login)
-- [`RENDER(free)`](https://dashboard.render.com)
 - [`KOYEB(free)`](https://app.koyeb.com)
-- [`HEROKU(paid)`](https://dashboard.heroku.com/new?template=https://github.com/kingmalvn/malvin.session)
 - [`NETLIFY(paid)`](https://netlify.app)
 - [`RAILWAY(paid)`](https://railway.app) or your own hosting.
 ___
 
 
-# [Visit Output](https://portfolio-okq8.vercel.app)
+# [Check out my profile ](https://portfolio-okq8.vercel.app)
 
 
 
