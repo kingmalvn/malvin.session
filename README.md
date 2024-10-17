@@ -44,7 +44,23 @@ Now Deploy
 <a href='https://dashboard.render.com/new?template=https://github.com/kingmalvn/malvin.session' target="_white"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-white?style=for-the-badge&logo=Render&logoColor=black'/>
 
 
-[`HERE'S AN EXAMPLE OUTPUT`](https://malvin-session-0h9e.onrender.com/)
+
+## Deploy Here
+
+- [`VERCEL(free)`](https://vercel.com/login)
+- [`RENDER(free)`](https://dashboard.render.com)
+- [`KOYEB(free)`](https://app.koyeb.com)
+- [`HEROKU(paid)`](https://dashboard.heroku.com/new?template=https://github.com/kingmalvn/malvin.session)
+- [`NETLIFY(paid)`](https://netlify.app)
+- [`RAILWAY(paid)`](https://railway.app) or your own hosting.
+___
+
+
+# [Visit Output](https://portfolio-okq8.vercel.app)
+
+
+
+[`Tap Here to see an EXAMPLE OUTPUT`](https://malvin-session-0h9e.onrender.com/)
 # `Owner`
 
  <a href="https://github.com/kingmalvn"><img src="https://github.com/kingmalvn.png" width="250" height="250" alt=" Malvin King"/></a>
