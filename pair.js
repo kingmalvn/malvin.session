@@ -1,107 +1,97 @@
+const PastebinAPI = require('pastebin-js'),
+pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
+const {makeid} = require('./id');
 const express = require('express');
 const fs = require('fs');
-const { exec } = require("child_process");
 let router = express.Router()
 const pino = require("pino");
 const {
-    default: makeWASocket,
-    useMultiFileAuthState,
+    default: Malvin_King,    useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
-    Browsers,
-    jidNormalizedUser
-} = require("@whiskeysockets/baileys");
-const { upload } = require('./mega');
+    Browsers
+} = require("maher-zubair-baileys");
 
-function removeFile(FilePath) {
-    if (!fs.existsSync(FilePath)) return false;
-    fs.rmSync(FilePath, { recursive: true, force: true });
-}
-
+function removeFile(FilePath){
+    if(!fs.existsSync(FilePath)) return false;
+    fs.rmSync(FilePath, { recursive: true, force: true })
+ };
 router.get('/', async (req, res) => {
+    const id = makeid();
     let num = req.query.number;
-    async function PrabathPair() {
-        const { state, saveCreds } = await useMultiFileAuthState(`./session`);
-        try {
-            let PrabathPairWeb = makeWASocket({
+        async function MALVIN_KING_PAIR_CODE() {
+        const {
+            state,
+            saveCreds
+        } = await useMultiFileAuthState('./temp/'+id)
+     try {
+            let Pair_Code_By_Malvin_King = Malvin_King({
                 auth: {
                     creds: state.creds,
-                    keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }).child({ level: "fatal" })),
+                    keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
                 },
                 printQRInTerminal: false,
-                logger: pino({ level: "fatal" }).child({ level: "fatal" }),
-                browser: Browsers.macOS("Safari"),
-            });
-
-            if (!PrabathPairWeb.authState.creds.registered) {
+                logger: pino({level: "fatal"}).child({level: "fatal"}),
+                browser: ["Chrome (Linux)", "", ""]
+             });
+             if(!Pair_Code_By_Malvin_King.authState.creds.registered) {
                 await delay(1500);
-                num = num.replace(/[^0-9]/g, '');
-                const code = await PrabathPairWeb.requestPairingCode(num);
-                if (!res.headersSent) {
-                    await res.send({ code });
-                }
-            }
+                        num = num.replace(/[^0-9]/g,'');
+                            const code = await Pair_Code_By_Malvin_King.requestPairingCode(num)
+                 if(!res.headersSent){
+                 await res.send({code});
+                     }
+                 }
+            Pair_Code_By_Malvin_King.ev.on('creds.update', saveCreds)
+            Pair_Code_By_Malvin_King.ev.on("connection.update", async (s) => {
+                const {
+                    connection,
+                    lastDisconnect
+                } = s;
+                if (connection == "open") {
+                await delay(5000);
+                let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
+                await delay(800);
+               let b64data = Buffer.from(data).toString('base64');
+               let session = await Pair_Code_By_Malvin_King.sendMessage(Pair_Code_By_Malvin_King.user.id, { text: '' + b64data });
 
-            PrabathPairWeb.ev.on('creds.update', saveCreds);
-            PrabathPairWeb.ev.on("connection.update", async (s) => {
-                const { connection, lastDisconnect } = s;
-                if (connection === "open") {
-                    try {
-                        await delay(10000);
-                        const sessionPrabath = fs.readFileSync('./session/creds.json');
+               let MALVIN_KING_TEXT = `
+┏━━━━━━━━━━━━━━
+┃ᴍᴀʟᴠɪɴ-ᴍᴅ SESSION IS 
+┃SUCCESSFULLY
+┃CONNECTED ✅🔥
+┗━━━━━━━━━━━━━━━
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+❶ || Creator = 𖥘⚡ ᴍᴀʟᴠɪɴ-ᴋɪɴɢ ⚡𖥘
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+❷ || https://whatsapp.com/channel/0029Vac8SosLY6d7CAFndv3Z
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+❸ || Owner = https://wa.me/263780166288
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+❺ || Bot Repo = https://github.com/kingmalvn/RAVENS-MD
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+❻ || YouTube = https://www.youtube.com/@MalvinKing_TECH 
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+©2024-2099 ᴍᴀʟᴠɪɴ-ᴋɪɴɢ_`
+ await Pair_Code_By_Malvin_King.sendMessage(Pair_Code_By_Malvin_King.user.id,{text:MALVIN_KING_TEXT},{quoted:session})
+ 
 
-                        const auth_path = './session/';
-                        const user_jid = jidNormalizedUser(PrabathPairWeb.user.id);
-
-                      function randomMegaId(length = 6, numberLength = 4) {
-                      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-                      let result = '';
-                      for (let i = 0; i < length; i++) {
-                      result += characters.charAt(Math.floor(Math.random() * characters.length));
-                        }
-                       const number = Math.floor(Math.random() * Math.pow(10, numberLength));
-                        return `${result}${number}`;
-                        }
-
-                        const mega_url = await upload(fs.createReadStream(auth_path + 'creds.json'), `${randomMegaId()}.json`);
-
-                        const string_session = mega_url.replace('https://mega.nz/file/', '');
-
-                        const sid = string_session;
-
-                        const dt = await PrabathPairWeb.sendMessage(user_jid, {
-                            text: sid
-                        });
-
-                    } catch (e) {
-                        exec('pm2 restart prabath');
-                    }
-
-                    await delay(100);
-                    return await removeFile('./session');
-                    process.exit(0);
-                } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode !== 401) {
+        await delay(100);
+        await Pair_Code_By_Malvin_King.ws.close();
+        return await removeFile('./temp/'+id);
+            } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
-                    PrabathPair();
+                    MALVIN_KING_PAIR_CODE();
                 }
             });
         } catch (err) {
-            exec('pm2 restart prabath-md');
-            console.log("service restarted");
-            PrabathPair();
-            await removeFile('./session');
-            if (!res.headersSent) {
-                await res.send({ code: "Service Unavailable" });
-            }
+            console.log("service restated");
+            await removeFile('./temp/'+id);
+         if(!res.headersSent){
+            await res.send({code:"Service Unavailable"});
+         }
         }
     }
-    return await PrabathPair();
+    return await MALVIN_KING_PAIR_CODE()
 });
-
-process.on('uncaughtException', function (err) {
-    console.log('Caught exception: ' + err);
-    exec('pm2 restart prabath');
-});
-
-
-module.exports = router;
+module.exports = router
