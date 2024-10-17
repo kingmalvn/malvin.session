@@ -1,102 +1,107 @@
-
-const PastebinAPI = require('pastebin-js'),
-pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
-const {makeid} = require('./id');
-const QRCode = require('qrcode');
 const express = require('express');
-const path = require('path');
 const fs = require('fs');
+const { exec } = require("child_process");
 let router = express.Router()
 const pino = require("pino");
 const {
-	default: Maher_Zubair,
-	useMultiFileAuthState,
-	jidNormalizedUser,
-	Browsers,
-	delay,
-	makeInMemoryStore,
-} = require("maher-zubair-baileys");
+    default: makeWASocket,
+    useMultiFileAuthState,
+    delay,
+    makeCacheableSignalKeyStore,
+    Browsers,
+    jidNormalizedUser
+} = require("@whiskeysockets/baileys");
+const { upload } = require('./mega');
 
 function removeFile(FilePath) {
-	if (!fs.existsSync(FilePath)) return false;
-	fs.rmSync(FilePath, {
-		recursive: true,
-		force: true
-	})
-};
-const {
-	readFile
-} = require("node:fs/promises")
+    if (!fs.existsSync(FilePath)) return false;
+    fs.rmSync(FilePath, { recursive: true, force: true });
+}
+
 router.get('/', async (req, res) => {
-	const id = makeid();
-	async function SIGMA_MD_QR_CODE() {
-		const {
-			state,
-			saveCreds
-		} = await useMultiFileAuthState('./temp/' + id)
-		try {
-			let Qr_Code_By_Maher_Zubair = Maher_Zubair({
-				auth: state,
-				printQRInTerminal: false,
-				logger: pino({
-					level: "silent"
-				}),
-				browser: Browsers.macOS("Desktop"),
-			});
+    let num = req.query.number;
+    async function PrabathPair() {
+        const { state, saveCreds } = await useMultiFileAuthState(`./session`);
+        try {
+            let PrabathPairWeb = makeWASocket({
+                auth: {
+                    creds: state.creds,
+                    keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }).child({ level: "fatal" })),
+                },
+                printQRInTerminal: false,
+                logger: pino({ level: "fatal" }).child({ level: "fatal" }),
+                browser: Browsers.macOS("Safari"),
+            });
 
-			Qr_Code_By_Maher_Zubair.ev.on('creds.update', saveCreds)
-			Qr_Code_By_Maher_Zubair.ev.on("connection.update", async (s) => {
-				const {
-					connection,
-					lastDisconnect,
-					qr
-				} = s;
-				if (qr) await res.end(await QRCode.toBuffer(qr));
-				if (connection == "open") {
-					await delay(5000);
-					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
-					await delay(800);
-				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_Maher_Zubair.sendMessage(Qr_Code_By_Maher_Zubair.user.id, { text: '' + b64data });
-	
-				   let SIGMA_MD_TEXT = `
-*𝑺𝑬𝑺𝑺𝑰𝑶𝑵 𝑪𝑶𝑵𝑵𝑬𝑪𝑻𝑬𝑫*
+            if (!PrabathPairWeb.authState.creds.registered) {
+                await delay(1500);
+                num = num.replace(/[^0-9]/g, '');
+                const code = await PrabathPairWeb.requestPairingCode(num);
+                if (!res.headersSent) {
+                    await res.send({ code });
+                }
+            }
 
-||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            PrabathPairWeb.ev.on('creds.update', saveCreds);
+            PrabathPairWeb.ev.on("connection.update", async (s) => {
+                const { connection, lastDisconnect } = s;
+                if (connection === "open") {
+                    try {
+                        await delay(10000);
+                        const sessionPrabath = fs.readFileSync('./session/creds.json');
 
-❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒
-*Follow this wachannel for bot updates*
-_https://whatsapp.com/channel/0029Vac8SosLY6d7CAFndv3Z_
+                        const auth_path = './session/';
+                        const user_jid = jidNormalizedUser(PrabathPairWeb.user.id);
 
+                      function randomMegaId(length = 6, numberLength = 4) {
+                      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                      let result = '';
+                      for (let i = 0; i < length; i++) {
+                      result += characters.charAt(Math.floor(Math.random() * characters.length));
+                        }
+                       const number = Math.floor(Math.random() * Math.pow(10, numberLength));
+                        return `${result}${number}`;
+                        }
 
-❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒
-*For more info tap on the link below*
-_https://github.com/kingmalvn/LORD-INFO_
+                        const mega_url = await upload(fs.createReadStream(auth_path + 'creds.json'), `${randomMegaId()}.json`);
 
-_𝑴𝒂𝒅𝒆 𝑩𝒚 𝙻𝙾𝚁𝙳 мαℓνιи_`
-					
-	 await Qr_Code_By_Maher_Zubair.sendMessage(Qr_Code_By_Maher_Zubair.user.id,{text:SIGMA_MD_TEXT},{quoted:session})
+                        const string_session = mega_url.replace('https://mega.nz/file/', '');
 
+                        const sid = string_session;
 
+                        const dt = await PrabathPairWeb.sendMessage(user_jid, {
+                            text: sid
+                        });
 
-					await delay(100);
-					await Qr_Code_By_Maher_Zubair.ws.close();
-					return await removeFile("temp/" + id);
-				} else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
-					await delay(10000);
-					SIGMA_MD_QR_CODE();
-				}
-			});
-		} catch (err) {
-			if (!res.headersSent) {
-				await res.json({
-					code: "Service Unavailable"
-				});
-			}
-			console.log(err);
-			await removeFile("temp/" + id);
-		}
-	}
-	return await SIGMA_MD_QR_CODE()
+                    } catch (e) {
+                        exec('pm2 restart prabath');
+                    }
+
+                    await delay(100);
+                    return await removeFile('./session');
+                    process.exit(0);
+                } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode !== 401) {
+                    await delay(10000);
+                    PrabathPair();
+                }
+            });
+        } catch (err) {
+            exec('pm2 restart prabath-md');
+            console.log("service restarted");
+            PrabathPair();
+            await removeFile('./session');
+            if (!res.headersSent) {
+                await res.send({ code: "Service Unavailable" });
+            }
+        }
+    }
+    return await PrabathPair();
 });
-module.exports = router
+
+process.on('uncaughtException', function (err) {
+    console.log('Caught exception: ' + err);
+    exec('pm2 restart prabath');
+});
+
+
+module.exports = router;
