@@ -1,18 +1,15 @@
 {
-    "description": "qr",
-    "main": "./index.js",
-  "engines" : { 
-    "npm" : ">=9.7.2",
-    "node" : ">=20.0.0"
-    },
+"name": "web-pair",
+    "version": "0.0.1",
+    "description": "A multi functional whatsapp bot Web paircode.",
+    "main": "index.js",
     "scripts": {
-    "start": "node index.js"
-  },
-  "author": "kingmalvn",
-  "license": "MIT license",
+      "start": "pm2 start index.js --deep-monitoring --attach --name lord",
+      "stop": "pm2 stop lord",
+     "restart": "pm2 restart lord"
+    },
   "dependencies": {
-    "@whiskeysockets/baileys": "^6.5.0",
-    "maher-zubair-baileys": "^6.6.5",
+    "@whiskeysockets/baileys": "npm:@whiskeysockets/baileys",
     "qrcode": "^1.5.3",
     "awesome-phonenumber": "^2.64.0",
     "pino": "^8.1.0",
@@ -20,6 +17,9 @@
     "body-parser": "^1.20.1",
     "pastebin-js": "^1.0.6",
     "express": "^4.18.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "megajs": "^1.1.0",
+    "pm2": "^5.2.0"
+          
    }
 }
